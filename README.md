@@ -1,6 +1,6 @@
 # Kommunal IAM-plattform
 
-Ett labbbaserat portfolioprojekt som visar hur en kommunal identitetsmiljö kan byggas, säkras och kravställas. Projektet utgår från rollen som IAM-specialist: Active Directory, Microsoft Entra ID, MFA, federation, PKI och teknisk kravställning vid anskaffning.
+Ett labbbaserat pprojekt som visar hur en kommunal identitetsmiljö kan byggas, säkras och kravställas. Projektet utgår från rollen som IAM-specialist: Active Directory, Microsoft Entra ID, MFA, federation, PKI och teknisk kravställning vid anskaffning.
 
 > **Avgränsning:** Allt här är en labb. Domän `labb.local`, tenant `labb.onmicrosoft.com`, leverantörer och värden är fiktiva. Ingen riktig kunddata ingår. Kontrollera licenskrav och Microsofts aktuella dokumentation innan skripten körs, eftersom funktioner och namn ändras.
 
