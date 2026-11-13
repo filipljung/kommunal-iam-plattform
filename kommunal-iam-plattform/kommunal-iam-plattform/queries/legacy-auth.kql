@@ -1,0 +1,7 @@
+// Legacy authentication senaste 30 dagarna
+// Användning: Log Analytics eller Microsoft Sentinel (kräver SigninLogs)
+SigninLogs
+| where TimeGenerated > ago(30d)
+| where ClientAppUsed in ("Exchange ActiveSync", "IMAP4", "POP3", "SMTP", "Other clients")
+| summarize Forsok = count() by UserPrincipalName, ClientAppUsed
+| order by Forsok desc

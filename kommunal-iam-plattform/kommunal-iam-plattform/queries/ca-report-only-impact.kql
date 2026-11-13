@@ -1,0 +1,7 @@
+// Vad skulle report-only-policyerna ha blockerat eller krävt?
+SigninLogs
+| where TimeGenerated > ago(14d)
+| mv-expand pol = ConditionalAccessPolicies
+| where pol.result in ("reportOnlyFailure", "reportOnlyInterrupted")
+| summarize Traffar = count() by PolicyName = tostring(pol.displayName), Resultat = tostring(pol.result)
+| order by Traffar desc

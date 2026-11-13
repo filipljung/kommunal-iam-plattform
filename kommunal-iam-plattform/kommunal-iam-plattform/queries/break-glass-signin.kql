@@ -1,0 +1,6 @@
+// Inloggning med break-glass-konto. Basera larmregeln på denna fråga.
+// Byt ut kontonamnen mot dina egna.
+SigninLogs
+| where UserPrincipalName in~ ("breakglass1@labb.onmicrosoft.com", "breakglass2@labb.onmicrosoft.com")
+| project TimeGenerated, UserPrincipalName, IPAddress, ResultType, AppDisplayName
+| order by TimeGenerated desc
